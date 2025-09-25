@@ -1,0 +1,16 @@
+{
+    "reviews": [],
+    "statistics": {
+        "total_reviews": 0,
+        "average_rating": 5.0,
+        "rating_distribution": {
+            "5": 0,
+            "4": 0,
+            "3": 0,
+            "2": 0,
+            "1": 0
+        }
+    },
+    "verified_reviews": 0,
+    "featured_reviews": []
+}
