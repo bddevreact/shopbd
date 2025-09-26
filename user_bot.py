@@ -305,7 +305,6 @@ Product photo link -> {product.get('image_url', 'No image available')}
         markup.add(InlineKeyboardButton(button_text, callback_data=callback_data))
     
     markup.add(InlineKeyboardButton('🛒 Cart', callback_data='cart'))
-    markup.add(InlineKeyboardButton('🎁 Add to Wishlist', callback_data=f'wishlist_add_{product["name"].replace(" ", "_")}'))
     
     # Send product image if available
     if product.get('image_url'):
@@ -367,11 +366,7 @@ def create_main_menu(user_id, user_carts, shop_info=None):
     )
     markup.add(
         InlineKeyboardButton(t(lang, 'menu.orders'), callback_data='orders'),
-        InlineKeyboardButton(t(lang, 'menu.wishlist'), callback_data='wishlist')
-    )
-    markup.add(
-        InlineKeyboardButton(t(lang, 'menu.support'), callback_data='support_menu'),
-        InlineKeyboardButton(t(lang, 'menu.recommendations'), callback_data='recommendations_menu')
+        InlineKeyboardButton(t(lang, 'menu.support'), callback_data='support_menu')
     )
     markup.add(
         InlineKeyboardButton(t(lang, 'menu.language'), callback_data='language_menu'),
